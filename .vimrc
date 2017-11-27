@@ -36,6 +36,8 @@ inoremap <C-PageDown> <Esc>:tabnext<CR>i
 inoremap <C-t>        <Esc>:tabnew<CR>i
 inoremap <C-w>        <Esc>:tabclose<CR>i
 
+nnoremap <Tab> :tabnext<CR>
+
 filetype off
 filetype plugin indent on
 
@@ -45,4 +47,12 @@ hi SpellBad cterm=underline
 imap jj <Esc>
 
 command Kor setlocal spell spelllang=pl
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 0
+call vundle#end()
 

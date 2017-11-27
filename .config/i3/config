@@ -179,6 +179,19 @@ bindsym XF86AudioMute exec pamixer --toggle-mute
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton --config /home/przemub/.compton.conf
+exec --no-startup-id pcmanfm -d
+exec --no-startup-id ibus-daemon -drx
 
 for_window [class="Wine"] floating enable
+# https://github.com/ValveSoftware/steam-for-linux/issues/1040
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
 
